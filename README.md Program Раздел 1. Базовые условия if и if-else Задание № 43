@@ -1,0 +1,27 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program43
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Атмосферное давление (мм рт. ст.): ");
+            if (double.TryParse(Console.ReadLine(), out double pressure))
+            {
+                if (pressure < 740)
+                    Console.WriteLine("Пониженное давление");
+                else
+                    Console.WriteLine("Давление в норме.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода.");
+            }
+        }
+    }
+    }
